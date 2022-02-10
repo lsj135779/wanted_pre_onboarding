@@ -34,14 +34,13 @@ const View = styled.div`
   background-color: white;
   width: 300px;
   height: 120px;
-  display: flex;
-  flex-direction: column;
   margin: 100px;
   color: #4701cd;
   text-align: center;
   border-radius: 10px;
   .xbtn {
     cursor: pointer;
+    display: inline-block;
     padding-top: 5px;
     margin-bottom: 30px;
   }
@@ -63,7 +62,7 @@ export const Modal = () => {
             <span className="xbtn" onClick={clickModal}>
               &times;
             </span>
-            HELLO CODESTATES!
+            <div>HELLO CODESTATES!</div>
           </View>
         </Backdrop>
       )}
