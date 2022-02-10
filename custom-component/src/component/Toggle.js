@@ -2,11 +2,14 @@ import styled from "styled-components";
 import { useState } from "react";
 
 const Container = styled.div`
-  position: relative;
-  margin-top: 100px;
-  left: 43%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   cursor: pointer;
   .container {
+    position: relative;
     width: 100px;
     height: 55px;
     border-radius: 25px;
@@ -48,12 +51,13 @@ export const Toggle = () => {
   return (
     <>
       <Container onClick={clickToggle}>
-        <div className={`container ${isOn ? "click" : ""}`}></div>
-        <div className={`circle ${isOn ? "click" : ""}`}></div>
+        <div className={`container ${isOn ? "click" : ""}`}>
+          <div className={`circle ${isOn ? "click" : ""}`}></div>
+        </div>
+        <Description>
+          {isOn ? "Toggle Switch ON" : "Toggle Switch OFF"}
+        </Description>
       </Container>
-      <Description>
-        {isOn ? "Toggle Switch ON" : "Toggle Switch OFF"}
-      </Description>
     </>
   );
 };
