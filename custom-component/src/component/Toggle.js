@@ -35,6 +35,7 @@ const Container = styled.div`
 `;
 const Description = styled.div`
   margin-top: 10px;
+  text-align: center;
 `;
 
 export const Toggle = () => {
